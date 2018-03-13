@@ -13,12 +13,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         //如果已经缓存了天气数据就直接读取,不用再选城市了
-//        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
-//        if(prefs.getString("weather",null)!=null){
-//            Intent intent = new Intent(this,WeatherActivity.class);
-//            startActivity(intent);
-//            finish();
-//        }
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        if(prefs.getString("weather",null)!=null){
+            Intent intent = new Intent(this,WeatherActivity.class);
+            startActivity(intent);
+            finish();
+        }
 
     }
 }
